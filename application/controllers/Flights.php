@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Flight extends Application
+class Flights extends Application
 {
 
 	function __construct()
@@ -13,8 +13,8 @@ class Flight extends Application
         
 	public function index()
 	{
-		$this->data['pagebody'] = 'flight';
-		$this->render(); 
+            $this->data['pagebody'] = 'flights';
+            $this->render(); 
 	}
 
 }
