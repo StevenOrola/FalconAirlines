@@ -16,7 +16,6 @@ class Application extends CI_Controller
 	 * Constructor.
 	 * Establish view parameters & load common helpers
 	 */
-
 	function __construct()
 	{
 		parent::__construct();
@@ -44,6 +43,20 @@ class Application extends CI_Controller
 		// And then parse the page template, which will pull in and position the
 		// "meat" in its middle.
 		$this->parser->parse('template', $this->data);
+	}
+        
+        public function show($key)
+	{
+		// this is the view we want shown
+		$this->data['pagebody'] = 'specificflight';
+
+		// build the list of authors, to pass on to our view
+		$source = $this->quotes->get($key);
+
+		// pass on the data to present, adding the author record's fields
+		$this->data = array_merge($this->data, (array) $source);
+
+		$this->render();
 	}
 
 }
