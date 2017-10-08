@@ -46,17 +46,17 @@ class Application extends CI_Controller
 	}
         
         public function show($key)
-	{
-		// this is the view we want shown
-		$this->data['pagebody'] = 'specificflight';
+        {		
+		// shows the plane information page
+		$this->data['pagebody'] = 'planes';
+		
+                //grabs the information of the specific plane
+		$source = $this->info->get($key);
+		
+		$this->data['plane'] = $source;
 
-		// build the list of authors, to pass on to our view
-		$source = $this->quotes->get($key);
-
-		// pass on the data to present, adding the author record's fields
 		$this->data = array_merge($this->data, (array) $source);
-
 		$this->render();
-	}
+        }
 
 }

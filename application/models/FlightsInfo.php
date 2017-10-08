@@ -3,10 +3,8 @@
 
 class FlightsInfo extends CI_Model
 {
-
-
+        //data for each plane
 	var $data = array(
-
                    array(
                     "planeId" => "F001",  
                     "flightId" => "F111",
@@ -61,10 +59,7 @@ class FlightsInfo extends CI_Model
                     "base"=>"YPZ",
                     "dest"=> "YDT"
                     
-                  )
-                  
-                
-			 
+                  )		 
 	);
 
 	// Constructor
