@@ -26,7 +26,12 @@ class Info extends CI_Model
 			$this->data[$key] = $record;
 		}
 	}
-
+        
+        // retrieve a single fleet, null if not found
+	public function get($which)
+	{
+		return !isset($this->data[$which]) ? null : $this->data[$which];
+	}
 
 	// retrieve all of the planes in the fleet
 	public function all()
