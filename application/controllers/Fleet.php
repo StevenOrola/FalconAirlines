@@ -13,14 +13,33 @@ class Fleet extends Application
     //Homepage for Fleet       
     public function index() 
     {
-        $rows = $this->info->all();
+        
+           
+                // this is the view we want shown
+		$this->data['pagebody'] = 'fleet';
 
-        //generate the tables
-        $this->load->library('table');
-        $this->table->set_heading('Plane ID', 'Plane Name', 'Plane Type');
-        $this->data['thetable'] = $this->table->generate($rows);
-        $this->data['pagebody'] = 'fleet';
-        $this->render();
+		// build the list of authors, to pass on to our view
+		$source = $this->info->all();
+
+		// pass on the data to present, as the "authors" view parameter
+		$this->data['fleetz'] = $source;
+
+		$this->render();
+    }
+    
+     public function show($key)
+    {		
+		// shows the plane information page
+		$this->data['pagebody'] = 'planes';
+		
+                //grabs the information of the specific plane
+		$source = $this->info->get($key);
+		
+		$this->data['plane'] = $source;
+		
+                
+		$this->data = array_merge($this->data, (array) $source);
+		$this->render();
     }
 
 }
