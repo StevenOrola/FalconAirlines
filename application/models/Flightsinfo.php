@@ -1,7 +1,7 @@
 <?php
 
 
-class FlightsInfo extends CI_Model
+class Flightsinfo extends CI_Model
 {
         //data for each plane
 	var $data = array(
