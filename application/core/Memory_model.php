@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Generic data access model, with data stored in memory only.
  * 
@@ -8,7 +7,7 @@
  * Provide additional base models for different persistence choices
  * by extending this, and over-riding the load() and store() methods.
  *
- * @author		JLP
+ * @author				JLP
  * @copyright           Copyright (c) 2010-2017, James L. Parry
  * ------------------------------------------------------------------------
  */
