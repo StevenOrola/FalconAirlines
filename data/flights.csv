@@ -1,4 +1,4 @@
-planeId,flightId,departure,arrival,base,dest
+planeID,flightId,departure,arrival,base,dest
 F001,F111,1:00,3:30,YDT,YAC
 F002,F112,1:15,4:30,YDT,YDQ
 F003,F113,1:20,2:30,YDT,YPZ
