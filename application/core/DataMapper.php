@@ -5,7 +5,7 @@
  * This is the intended implmentation for collection access.
  * Implementing classes will handle persistence.
  *
- * @author		JLP
+ * @author				JLP
  * @copyright           Copyright (c) 2010-2017, James L. Parry
  * ------------------------------------------------------------------------
  */
