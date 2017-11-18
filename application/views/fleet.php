@@ -1,10 +1,12 @@
 <div class="row">
-    <h2 style="text-align: center">Meet the Fleet</h2>
-    {fleetinfo}
-	<div class="span4">
-		<a href="/fleet/show/{key}">
-                       {planeID}
-		</a>
-	</div>
-    {/fleetinfo}
+    <div class="span4">
+        <h2>Name: {id}</h2>
+        <p>Model: {model}</p>
+        <p>Manufacturer: {manufacturer} </p>
+        <p>Seats: {seats} </p>
+        <p>Reach: {reach} </p>
+        <p>Cruise: {cruise} </p>
+        <p>Takeoff: {takeoff} </p>
+        <p>Hourly: {hourly} </p>
+    </div>
 </div>

@@ -3,9 +3,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $config['menu_choices'] = array(
     'menudata' => array(
-        array('name' => 'Home', 'link' => '/'),
+        array('name' => 'Home', 'link' => '/welcome'),
         array('name' => 'Fleet', 'link' => '/fleet'),
-        array('name' => 'Flights', 'link' => '/flights')
+        array('name' => 'Flight', 'link' => '/flight'),
+        array('name' => 'Bookings', 'link' => '/booking/')
         )
     );
 
@@ -378,7 +379,7 @@ $config['encryption_key'] = '';
 $config['sess_driver'] = 'files';
 $config['sess_cookie_name'] = 'ci_session';
 $config['sess_expiration'] = 7200;
-$config['sess_save_path'] = NULL;
+$config['sess_save_path'] = '/tmp';
 $config['sess_match_ip'] = FALSE;
 $config['sess_time_to_update'] = 300;
 $config['sess_regenerate_destroy'] = FALSE;

@@ -1,21 +1,3 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Marketplace
-Explore
- @darrenchann
- Sign out
- Watch 1
-  Star 0  Fork 0 jedi-academy/CodeIgniter3.1-starter4
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights
-Branch: master Find file Copy pathCodeIgniter3.1-starter4/application/core/DataMapper.php
-6df32c2  5 days ago
-@jim-parry jim-parry Formal setup
-1 contributor
-RawBlameHistory     
-132 lines (114 sloc)  3.56 KB
 <?php
 /**
  * Generic data access abstraction.
@@ -63,7 +45,7 @@ interface DataMapper
 	 * @param string $key2 Second part of composite key, if applicable
 	 * @return object The requested record, null if not found.
 	 */
-	function get($key, $key2);
+	function get($key);
 	/**
 	 * Update an existing DB record.
 	 * Method fails if the record does not exist.
