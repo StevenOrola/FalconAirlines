@@ -13,40 +13,40 @@
 		public $hourly;
 		
 		public function setId($value) {
-			if (preg_match('/[^a-zA-Z0-9]/', $value) || strlen($value) <= 100)
+			if (strlen($value) <= 50)
 				$this->id = $value;
 		}
 		
 		public function setManufacturer($value) {
-			if (preg_match('/[^a-zA-Z]/', $value) || strlen($value) < 100)
+			if (strlen($value) < 50)
 				$this->manufacturer = $value;
 		}
 		public function setModel($value) {
-			if (preg_match('/[^a-zA-Z0-9]/', $value) || strlen($value) < 4)
+			if (strlen($value) < 4)
 				$this->model = $value;
 		}
 		public function setPrice($value) {
-			if (preg_match('/[^0-9]/', $value) || strlen($value) < 5)
+			if (strlen($value) < 100)
 				$this->price = $value;
 		}
 		public function setSeats($value) {
-			if (preg_match('/[^0-9]/', $value) || strlen($value) < 3)
+			if (strlen($value) < 4)
 				$this->seats = $value;
 		}
 		public function setReach($value) {
-			if (preg_match('/[^0-9]/', $value) || strlen($value) < 5)
+			if (strlen($value) < 5000000)
 				$this->reach = $value;
 		}
 		public function setCruise($value) {
-			if (preg_match('/[^0-9]/', $value) || strlen($value) < 5)
+			if (strlen($value) < 5000000)
 				$this->cruise = $value;
 		}
 		public function setTakeoff($value) {
-			if (preg_match('/[^0-9]/', $value) || strlen($value) < 5)
+			if (strlen($value) < 5000000)
 				$this->takeoff = $value;
 		}
 		public function setHourly($value) {
-			if (preg_match('/[^0-9]/', $value) || strlen($value) < 5)
+			if (strlen($value) < 100000000000)
 				$this->hourly = $value;
 		}
 	}
