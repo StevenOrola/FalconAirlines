@@ -6,7 +6,7 @@ $config['menu_choices'] = array(
         array('name' => 'Home', 'link' => '/welcome'),
         array('name' => 'Fleet', 'link' => '/fleet'),
         array('name' => 'Flight', 'link' => '/flight'),
-        array('name' => 'Bookings', 'link' => '/booking/')
+        array('name' => 'Bookings', 'link' => '/booking')
         )
     );
 
