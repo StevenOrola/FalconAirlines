@@ -9,6 +9,15 @@ class Booking extends Application {
     public function index() {
         $this->data['pagebody'] = 'booking';
         $this->data['pagetitle'] = 'Search Flight';
+        
+        
+        $this->render();
+    }
+    
+    public function search() {
+        $this->data['pagebody'] = 'booking';
+        $this->data['pagetitle'] = 'Results';
+        
         $this->render();
     }
 }

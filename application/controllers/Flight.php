@@ -21,7 +21,7 @@ class Flight extends Application {
 
     public function show($key) {
         $this->load->helper('form');
-        //$role = $this->session->userdata('userrole');
+        $role = $this->session->userdata('userrole');
         $this->data['schedules'] = $this->flights->getSchedule();
 
         foreach ($this->data['schedules'] as $schedule) {
@@ -43,6 +43,11 @@ class Flight extends Application {
           );
           $this->data = array_merge($this->data, $fields); */
         //} else {
+        		$this->data['add'] = null;
+
+		if ($role == ROLE_GUEST) {
+			$this->data['add'] .= $this->parser->parse('flights_add', [], true);
+		}
         $this->data['pagebody'] = 'flightDetail';
         $this->data = array_merge($this->data, (array) $flight);
         //}
