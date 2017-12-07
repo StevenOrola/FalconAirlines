@@ -24,7 +24,17 @@ class Application extends CI_Controller
 		$this->data = array ();
 		$this->data['pagetitle'] = 'Falcon Airlines';
 		$this->data['ci_version'] = (ENVIRONMENT === 'development') ? 'CodeIgniter Version <strong>'.CI_VERSION.'</strong>' : '';
-	}
+	
+                $currentRole = $this->session->has_userdata('userrole');
+
+		if (!$currentRole) {
+			$this->session->set_userdata('userrole', ROLE_GUEST);
+		}
+
+		$role = $this->session->userdata('userrole');
+		$this->data['role'] = $role;
+                
+        }
 
 	/**
 	 * Render this page

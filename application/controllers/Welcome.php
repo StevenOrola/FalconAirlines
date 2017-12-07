@@ -17,6 +17,7 @@ class Welcome extends Application {
     public function index() {
         $this->load->model('Flights');
         $this->data = $this->Flights->all();
+        $role = $this->session->userdata('userrole');
 
         // count airplanes
         $count = count($this->data['airplanes']);
@@ -47,7 +48,8 @@ class Welcome extends Application {
         }
 
         $this->data['pagebody'] = 'homepage';
-        $this->data['pagetitle'] = 'Falcon Airlines';
+        $this->data['pagetitle'] = 'Falcon Airlines';      
+        $this->data['role'] = $role;
         $this->data['base'] = $base['id'];
         $this->data['port1'] = $dest1['id'];
         $this->data['port2'] = $dest2['id'];
